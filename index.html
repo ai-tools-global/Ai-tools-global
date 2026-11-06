@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="AI Tools Global brings together AI chat, writing, image generation, coding, study and YouTube content tools.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b1020">
+  <title>AI Tools Global | AI Tools for Everyone</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="logo" href="#" aria-label="AI Tools Global home">
+      AI Tools <span>Global</span>
+    </a>
+    <span class="tagline">AI for Everyone</span>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="eyebrow">YOUR AI TOOLKIT</span>
+      <h1>One Place.<br><span>Endless AI Possibilities.</span></h1>
+      <p>Explore AI tools for writing, coding, learning and creativity.</p>
+      <input id="search" type="search"
+        placeholder="Search AI tools..."
+        aria-label="Search AI tools">
+    </section>
+
+    <section class="tools-section">
+      <div class="section-heading">
+        <div>
+          <h2>Explore AI Tools</h2>
+          <p>Choose a tool to get started.</p>
+        </div>
+        <span id="count">6 tools</span>
+      </div>
+
+      <div class="grid" id="toolGrid">
+        <article class="tool-card" data-terms="chat chatbot questions assistant">
+          <div class="tool-icon">🤖</div>
+          <h3>AI Chat Assistant</h3>
+          <p>Explore ideas, ask questions and learn new things.</p>
+          <button data-tool="chat">Open Tool ↗</button>
+        </article>
+
+        <article class="tool-card" data-terms="writer writing story article email">
+          <div class="tool-icon">✍️</div>
+          <h3>AI Content Writer</h3>
+          <p>Plan stories, articles, emails and creative content.</p>
+          <button data-tool="writer">Open Tool ↗</button>
+        </article>
+
+        <article class="tool-card" data-terms="image generator artwork picture">
+          <div class="tool-icon">🎨</div>
+          <h3>AI Image Generator</h3>
+          <p>Describe your idea and prepare an image prompt.</p>
+          <button data-tool="image">Open Tool ↗</button>
+        </article>
+
+        <article class="tool-card" data-terms="coding code programming">
+          <div class="tool-icon">💻</div>
+          <h3>AI Coding Assistant</h3>
+          <p>Work through programming questions and code ideas.</p>
+          <button data-tool="coding">Open Tool ↗</button>
+        </article>
+
+        <article class="tool-card" data-terms="study student education learning">
+          <div class="tool-icon">📚</div>
+          <h3>AI Study Assistant</h3>
+          <p>Understand topics and prepare study material.</p>
+          <button data-tool="study">Open Tool ↗</button>
+        </article>
+
+        <article class="tool-card" data-terms="youtube video title script description">
+          <div class="tool-icon">▶️</div>
+          <h3>AI YouTube Assistant</h3>
+          <p>Plan video ideas, scripts and descriptions.</p>
+          <button data-tool="youtube">Open Tool ↗</button>
+        </article>
+      </div>
+
+      <p id="noResults" hidden>No matching AI tools found.</p>
+    </section>
+
+    <section id="workspace" class="workspace" hidden>
+      <button id="backButton" class="back-button">← All tools</button>
+      <h2 id="toolTitle">AI Tool</h2>
+      <p id="toolDescription"></p>
+
+      <label for="prompt">What would you like help with?</label>
+      <textarea id="prompt" rows="5"
+        placeholder="Describe your idea or question..."></textarea>
+
+      <div class="actions">
+        <button id="generateButton">Prepare AI Prompt</button>
+        <button id="copyButton" class="secondary" disabled>Copy Prompt</button>
+      </div>
+
+      <div id="resultBox" class="result-box" hidden>
+        <h3>Your prepared prompt</h3>
+        <p id="result"></p>
+        <p class="notice">
+          Demo mode: this creates a prompt, not an AI-generated answer.
+          A secure AI service connection is required for real results.
+        </p>
+      </div>
+      <p id="status" role="status"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>AI Tools Global</p>
+    <p>Explore AI. Learn. Create.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
